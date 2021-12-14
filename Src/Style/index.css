@@ -52,3 +52,62 @@ nav ul li a:hover{
     width: 30px;
     cursor: pointer;
 }
+
+.footer{
+    background: #24262b;
+    padding: 70px 0;
+}
+.container{
+    max-width: 1170px;
+    margin: auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer-col-1 {
+    width: 25%;
+    padding: 0 15px;
+}
+.footer-col-1 h4 a{
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+}
+.footer-col-1 p {
+    color: #fff;
+    font-size: 14px;
+}
+.footer-col-2 ul {
+    list-style: none;
+    width: 25%;
+    padding: 0 15px;
+    display: inline;
+    margin-bottom: 3px;
+}
+.footer-col-2 ul li {
+    margin-bottom: 5px;
+    
+}
+.footer-col-2 ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+.footer-col-2 ul li a:hover {
+    color: #ff4321;
+    text-decoration: underline;
+}
+.footer-col-2 h4 {
+    font-size: 18px;
+    color: #fff;
+}
+.qr img{
+    height: 100px;
+    width: auto;
+    padding-left: 565px;
+}
+.qr p{
+    color: #fff;
+    font-size: 16px;
+    padding-left: 565px;
+}
