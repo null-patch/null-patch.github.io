@@ -1,0 +1,248 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --primary-color: #fdfdfd;
+    --secondary-color: #212121;
+}
+.dark-theme {
+    --primary-color: #121212;
+    --secondary-color: #fff;
+    transition: 0.5s;
+}
+#navbar{
+    width: 100%;
+    background: var(--primary-color);
+    font-family: sans-serif;
+    position: relative;
+}
+
+nav{
+    width: 84%;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+}
+nav ul{
+    flex: 1;
+    text-align: right;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li .active{
+    text-decoration: underline;
+    color: #ff4321;
+}
+nav ul li a{
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+nav ul li a:hover{
+    color: #ff4321;
+}
+
+#icon{
+    width: 30px;
+    cursor: pointer;
+}
+
+.footer{
+    background: #24262b;
+    padding: 70px 0;
+}
+.container{
+    max-width: 1170px;
+    margin: auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer-col-1 {
+    width: 25%;
+    padding: 0 15px;
+}
+.footer-col-1 h4 a{
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+}
+.footer-col-1 p {
+    color: #fff;
+    font-size: 14px;
+}
+.footer-col-2 ul {
+    list-style: none;
+    width: 25%;
+    padding: 0 15px;
+    display: inline;
+    margin-bottom: 3px;
+}
+.footer-col-2 ul li {
+    margin-bottom: 5px;
+    
+}
+.footer-col-2 ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+.footer-col-2 ul li a:hover {
+    color: #ff4321;
+    text-decoration: underline;
+}
+.footer-col-2 h4 {
+    font-size: 18px;
+    color: #fff;
+}
+.qr img{
+    height: 100px;
+    width: auto;
+    padding-left: 565px;
+}
+.qr p{
+    color: #fff;
+    font-size: 16px;
+    padding-left: 565px;
+}
+
+.contact{
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.contact .content {
+    max-width: 800px;
+    text-align: center;
+}
+.contact .content h2 {
+    font-size: 36px;
+    font-weight: 500;
+}
+.contact .content p {
+    font-weight: 500;
+}
+.paras{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.paras .contactInfo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.paras .contactInfo .box {
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+.paras .contactInfo .box .icon {
+    min-width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+.paras .contactInfo .box .text {
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    flex-direction: column;
+    font-weight: 300;
+}
+.paras .contactInfo .box .text h3{
+    font-weight: 500;
+}
+.contactForm{
+    width: 40%;
+    padding: 40px;
+    background-color: var(--primary-color);
+}
+.contactForm h2 {
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--secondary-color);
+}
+.contactForm .inputbox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+    color: var(--secondary-color);
+}
+.contactForm .inputbox input,
+.contactForm .inputbox textarea {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    background: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    outline: none;
+    resize: none;
+}
+.contactForm .inputbox span {
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+.contactForm .inputbox input:focus ~ span,
+.contactForm .inputbox input:valid ~ span,     
+.contactForm .inputbox textarea:focus ~ span,
+.contactForm .inputbox textarea:valid ~ span {
+    color: #e91e61;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+.contactForm .inputbox button{
+    width: 100px;
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+@media (max-width: 991px){
+    .contact {
+        padding: 50px;
+    }
+    .paras {
+        flex-direction: column;
+    }
+    .paras .contactInfo {
+        margin-bottom: 40px;
+    }
+    .paras .contactInfo,
+    .contactForm {
+        width: 100%;
+    }
+}
