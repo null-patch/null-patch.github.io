@@ -40,6 +40,10 @@ nav ul li{
     list-style: none;
     margin: 10px 20px;
 }
+nav ul li .active{
+    text-decoration: underline;
+    color: #ff4321;
+}
 nav ul li a{
     text-decoration: none;
     color: var(--secondary-color);
