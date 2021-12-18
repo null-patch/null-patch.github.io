@@ -1,13 +1,26 @@
-const icon = document.getElementById("icon");
-icon.onclick = function () {
-    document.body.classList.toggle("dark-theme");
-    if (document.body.classList.contains("dark-theme")) {
-        icon.src = "../../Assets/sun.png";
-    } else {
-        icon.src = "../../Assets/moon.png";
-    }
+let darkMode = localStorage.getItem('darkMode');
+const darkModeToggle = document.querySelector('#dark-mode-toggle');
+const enableDarkMode = () => {
+    document.body.classList.add('darkmode');
+    localStorage.setItem('darkMode', 'enabled');
 }
 
+const disableDarkMode = () => {
+    document.body.classList.remove('darkmode');
+    localStorage.setItem('darkMode', null);
+}
+if (darkMode === 'enabled') {
+    enableDarkMode();
+}
+
+darkModeToggle.addEventListener('click', () => {
+    darkMode = localStorage.getItem('darkMode');
+    if (darkMode !== 'enabled') {
+        enableDarkMode();
+    } else {
+        disableDarkMode();
+    }
+});
 
 window.addEventListener("DOMContentLoaded", function () {
     var form = document.getElementById("my-form");

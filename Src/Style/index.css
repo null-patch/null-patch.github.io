@@ -6,7 +6,7 @@
     --primary-color: #fdfdfd;
     --secondary-color: #212121;
 }
-.dark-theme {
+.darkmode {
     --primary-color: #121212;
     --secondary-color: #fff;
 }
@@ -52,9 +52,17 @@ nav ul li a:hover{
     color: #ff4321;
 }
 
-#icon{
-    width: 30px;
+.dark-mode-toggle{
+    top: 1em;
+    right: 1em;
+    color: var(--secondary-color);
+    border: 2px solid currentColor;
+    padding: 4px;
+    background: transparent;
     cursor: pointer;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
 }
 
 .footer{
