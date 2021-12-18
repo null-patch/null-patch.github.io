@@ -72,6 +72,7 @@ nav ul li a:hover{
 .container{
     max-width: 1170px;
     margin: auto;
+    position: relative;
 }
 .row{
     display: flex;
@@ -116,10 +117,15 @@ nav ul li a:hover{
 .qr img{
     height: 100px;
     width: auto;
-    padding-left: 565px;
+    padding-left: 655px;
 }
 .qr p{
     color: #fff;
     font-size: 16px;
-    padding-left: 565px;
+    padding-left: 655px;
+}
+.license{
+    position: absolute;
+    padding-left: 13px;
+    bottom: 35px;
 }
