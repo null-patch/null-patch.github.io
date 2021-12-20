@@ -1,15 +1,19 @@
 *{
     margin: 0;
     padding: 0;
-    transition: background 2s;
+    box-sizing: border-box;
+    transition: background 1.5s ease-in;
 }
 :root{
     --primary-color: #fdfdfd;
     --secondary-color: #212121;
+    --nav-color: #ff4321;
+    --fixed-color: #fff;
 }
 .darkmode {
-    --primary-color: #121212;
-    --secondary-color: #fff;
+    --primary-color: #212121;
+    --secondary-color: #fdfdfd;
+    --fixed-color: #fff;
 }
 #navbar{
     height: 100vh;
@@ -42,15 +46,20 @@ nav ul li{
     margin: 10px 20px;
 }
 nav ul li .active{
-    text-decoration: underline;
-    color: #ff4321;
+    border:  0.125em solid;
+    color: var(--nav-color);
+    padding: 0.50em 0.5em;
+}
+nav ul li .active:hover{
+    background-color: var(--nav-color);
+    color: var(--secondary-color);
 }
 nav ul li a{
     text-decoration: none;
     color: var(--secondary-color);
 }
 nav ul li a:hover{
-    color: #ff4321;
+    color: var(--nav-color);
 }
 
 .dark-mode-toggle{
@@ -66,9 +75,11 @@ nav ul li a:hover{
     height: 30px;
 }
 
+
+
 .footer{
     background: #24262b;
-    padding: 70px 0;
+    padding: 30px 0;
 }
 .container{
     max-width: 1170px;
@@ -85,11 +96,11 @@ nav ul li a:hover{
 }
 .footer-col-1 h4 a{
     font-size: 18px;
-    color: #fff;
+    color: var(--fixed-color);
     text-decoration: none;
 }
 .footer-col-1 p {
-    color: #fff;
+    color: var(--fixed-color);
     font-size: 14px;
 }
 .footer-col-2 ul {
@@ -104,16 +115,16 @@ nav ul li a:hover{
     
 }
 .footer-col-2 ul li a{
-    color: #fff;
+    color: var(--fixed-color);
     text-decoration: none;
 }
 .footer-col-2 ul li a:hover {
-    color: #ff4321;
+    color: var(--nav-color);
     text-decoration: underline;
 }
 .footer-col-2 h4 {
     font-size: 18px;
-    color: #fff;
+    color: var(--fixed-color);
 }
 .qr img{
     height: 100px;
@@ -121,7 +132,7 @@ nav ul li a:hover{
     padding-left: 655px;
 }
 .qr p{
-    color: #fff;
+    color: var(--fixed-color);
     font-size: 16px;
     padding-left: 655px;
 }
