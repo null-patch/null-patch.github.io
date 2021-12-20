@@ -46,8 +46,9 @@ nav ul li{
     margin: 10px 20px;
 }
 nav ul li .active{
-    border:  0.125em solid;
-    color: var(--nav-color);
+    border:  0.125em var(--nav-color) solid;
+    color: var(--secondary-color);
+    border-radius: 12px;
     padding: 0.50em 0.5em;
 }
 nav ul li .active:hover{
@@ -60,6 +61,7 @@ nav ul li a{
 }
 nav ul li a:hover{
     color: var(--nav-color);
+    transition: 0.6s ease-in-out; 
 }
 
 .dark-mode-toggle{

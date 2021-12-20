@@ -1,9 +1,12 @@
+@import "https://fonts.googleapis.com/css?family=ABeeZee";
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     transition: background 1.5s ease-in;
+    font-family: 'ABeeZee';
 }
+
 *,
 *::before,
 *::after {
@@ -52,8 +55,9 @@ nav ul li{
     margin: 10px 20px;
 }
 nav ul li .active{
-    border:  0.125em solid;
-    color: var(--nav-color);
+    border:  0.125em var(--nav-color) solid;
+    border-radius: 12px;
+    color: var(--secondary-color);
     padding: 0.50em 0.5em;
 }
 nav ul li .active:hover{
@@ -142,6 +146,8 @@ nav ul li a:hover{
 }
 .paras .contactInfo .box .text h3{
     font-weight: 500;
+    padding-left: 40px;
+    margin-bottom: 5px;
 }
 .contactForm{
     width: 40%;
@@ -200,6 +206,7 @@ nav ul li a:hover{
 .contactForm .inputbox .neon-button:hover,
 .contactForm .inputbox .neon-button:focus{
     color: var(--primary-color);
+    transition: 0.7s ease-out;
     text-shadow: none;
 }
 .contactForm .inputbox .neon-button:hover::before,
