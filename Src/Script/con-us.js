@@ -1,6 +1,8 @@
 var logo = document.getElementById('logo');
 logo.onclick = function(){location.reload()};
 
+document.addEventListener('contextmenu', event => event.preventDefault());
+
 let darkMode = localStorage.getItem('darkMode');
 const darkModeToggle = document.querySelector('#dark-mode-toggle');
 const enableDarkMode = () => {

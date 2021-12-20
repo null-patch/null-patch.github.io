@@ -5,3 +5,4 @@ window.onmousemove = function(e){
     container.style.backgroundPositionX = x + 'px';
     container.style.backgroundPositionY = y + 'px';
 };
+document.addEventListener('contextmenu', event => event.preventDefault());
