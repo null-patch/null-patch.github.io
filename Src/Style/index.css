@@ -1,9 +1,12 @@
+@import "https://fonts.googleapis.com/css?family=ABeeZee";
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     transition: background 1.5s ease-in;
+    font-family: 'ABeeZee';
 }
+
 :root{
     --primary-color: #fdfdfd;
     --secondary-color: #212121;
@@ -14,6 +17,20 @@
     --primary-color: #212121;
     --secondary-color: #fdfdfd;
     --fixed-color: #fff;
+}
+.deep{
+    background: var(--secondary-color);
+    padding: 0.5rem 1.5rem;
+    border-radius: 0 0 0.25rem 0.25rem;
+    position: absolute;
+    left: .5rem;
+    transform: translateY(-120%);
+    transition: transform 325ms ease-in;
+    text-decoration: none;
+    color: var(--primary-color);
+}
+.deep:focus{
+    transform: translateY(0);
 }
 #navbar{
     height: 100vh;
