@@ -55,10 +55,11 @@ nav ul li{
     margin: 10px 20px;
 }
 nav ul li .active{
-    border:  0.125em var(--nav-color) solid;
+    border:  2px var(--nav-color) solid;
     border-radius: 12px;
     color: var(--secondary-color);
-    padding: 0.50em 0.5em;
+    padding: 15px 5px;
+    margin-left: -15px;
 }
 nav ul li .active:hover{
     background-color: var(--nav-color);
@@ -163,7 +164,6 @@ nav ul li a:hover{
     position: relative;
     width: 100%;
     margin-top: 10px;
-    /* color: var(--secondary-color);  */
 }
 .contactForm .inputbox .neon-button{
     display: inline-block;

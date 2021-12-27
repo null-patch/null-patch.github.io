@@ -13,7 +13,7 @@
     --nav-color: #ff4321;
     --fixed-color: #fff;
 }
-.darkmode {
+.darkmode{
     --primary-color: #212121;
     --secondary-color: #fdfdfd;
     --fixed-color: #fff;
@@ -63,10 +63,11 @@ nav ul li{
     margin: 10px 20px;
 }
 nav ul li .active{
-    border:  0.125em var(--nav-color) solid;
+    border:  2px var(--nav-color) solid;
     color: var(--secondary-color);
     border-radius: 12px;
-    padding: 0.50em 0.5em;
+    padding: 15px 5px;
+    margin-left: -15px;
 }
 nav ul li .active:hover{
     background-color: var(--nav-color);
