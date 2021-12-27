@@ -1,4 +1,11 @@
+@import "https://fonts.googleapis.com/css?family=ABeeZee";
+*{
+    margin: 0;
+    /* padding: 0; */
+    font-family: 'ABeeZee';
+}
 #canvas{
     width: 800;
     height: 800;
+    position: fixed;
 }

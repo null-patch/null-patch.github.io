@@ -76,7 +76,7 @@ let maxColumns = cw / fontSize;
 canvas.width = cw;
 canvas.height = ch;
 
-let frames = 0;
+let frames = 3;
 
 class FallingChar {
     constructor(x, y) {
