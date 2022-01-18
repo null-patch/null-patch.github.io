@@ -85,7 +85,31 @@ nav ul li a:hover{
     width: 30px;
     height: 30px;
 }
-
+#contex-menu{
+    position: absolute;
+    z-index: 10;
+    width: 150px;
+    background: var(--secondary-color);
+    transform: scale(0);
+    transform-origin: top left;
+    border: solid var(--primary-color);
+    outline: solid var(--secondary-color);
+}
+#contex-menu.active{
+    transform: scale(1);
+}
+#contex-menu .item{
+    padding: 8px 10px;
+    font-size: 15px;
+    color: var(--primary-color);
+}
+#contex-menu .item:hover{
+    background: var(--hvr-color);
+}
+#contex-menu .item i{
+    display: inline-block;
+    margin-right: 5px;
+}
 /* Contacts */
 
 .contact{
@@ -316,7 +340,7 @@ nav ul li a:hover{
 }
 .footer-col-2 ul li a:hover {
     color: #ff4321;
-    text-decoration: underline;
+    text-decoration: none;
 }
 .footer-col-2 h4 {
     font-size: 18px;

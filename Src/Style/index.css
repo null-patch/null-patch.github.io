@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    transition: background 1.5s ease-in;
+    transition: background 0.5s ease-in-out;
     font-family: 'ABeeZee';
 }
 
@@ -12,11 +12,13 @@
     --secondary-color: #212121;
     --nav-color: #ff4321;
     --fixed-color: #fff;
+    --hvr-color: #494949;
 }
 .darkmode{
     --primary-color: #212121;
     --secondary-color: #fdfdfd;
     --fixed-color: #fff;
+    --hvr-color: #d1d1d1;
 }
 .deep{
     background: var(--secondary-color);
@@ -79,24 +81,47 @@ nav ul li a{
 }
 nav ul li a:hover{
     color: var(--nav-color);
-    transition: 0.6s ease-in-out; 
+    transition: 0.5s ease-in-out; 
 }
 
 .dark-mode-toggle{
     top: 1em;
     right: 1em;
     color: var(--secondary-color);
-    border: 2px solid currentColor;
+    border: 0px;
     padding: 4px;
     background: transparent;
     cursor: pointer;
-    border-radius: 5px;
     width: 30px;
     height: 30px;
+    outline: none;
 }
 
-
-
+#contex-menu{
+    position: absolute;
+    z-index: 10;
+    width: 150px;
+    background: var(--secondary-color);
+    transform: scale(0);
+    transform-origin: top left;
+    border: solid var(--primary-color);
+    outline: solid var(--secondary-color);
+}
+#contex-menu.active{
+    transform: scale(1);
+}
+#contex-menu .item{
+    padding: 8px 10px;
+    font-size: 15px;
+    color: var(--primary-color);
+}
+#contex-menu .item:hover{
+    background: var(--hvr-color);
+}
+#contex-menu .item i{
+    display: inline-block;
+    margin-right: 5px;
+}
 .footer{
     background: #24262b;
     padding: 30px 0;
@@ -140,7 +165,7 @@ nav ul li a:hover{
 }
 .footer-col-2 ul li a:hover {
     color: var(--nav-color);
-    text-decoration: underline;
+    text-decoration: none;
 }
 .footer-col-2 h4 {
     font-size: 18px;
