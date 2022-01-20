@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    transition: background 1.5s ease-in;
+    transition: background 0.5s ease-in-out;
     font-family: 'ABeeZee';
 }
 
@@ -71,6 +71,7 @@ nav ul li a{
 }
 nav ul li a:hover{
     color: var(--nav-color);
+    transition: 0.5s ease-in-out;
 }
 
 .dark-mode-toggle{
