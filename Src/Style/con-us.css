@@ -78,11 +78,10 @@ nav ul li a:hover{
     top: 1em;
     right: 1em;
     color: var(--secondary-color);
-    border: 2px solid currentColor;
+    border: 0px;
     padding: 4px;
     background: transparent;
     cursor: pointer;
-    border-radius: 5px;
     width: 30px;
     height: 30px;
     outline: none;
