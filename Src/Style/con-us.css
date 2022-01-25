@@ -85,6 +85,7 @@ nav ul li a:hover{
     border-radius: 5px;
     width: 30px;
     height: 30px;
+    outline: none;
 }
 #contex-menu{
     position: absolute;
