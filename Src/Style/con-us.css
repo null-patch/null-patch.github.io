@@ -255,6 +255,7 @@ nav ul li a:hover{
     margin: 10px 0;
     border: none;
     background: var(--primary-color);
+    color: var(--secondary-color);
     border-bottom: 2px solid var(--secondary-color);
     outline: none;
     resize: none;
