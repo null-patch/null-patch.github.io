@@ -13,3 +13,14 @@ window.ondeviceorientation = function(f){
     container.style.backgroundPositionX = x + 'px';
     container.style.backgroundPositionX = y + 'px';
 };
+
+window.addEventListener('contextmenu', function(event){
+    event.preventDefault();
+    var contextElement = document.getElementById("contex-menu")
+    contextElement.style.left = event.pageX + "px";
+    contextElement.style.top = event.pageY + "px";
+    contextElement.classList.add("active");
+});
+window.addEventListener("click", function(){
+    document.getElementById("contex-menu").classList.remove("active")
+});

@@ -107,6 +107,11 @@ nav ul li a:hover{
 #contex-menu .item:hover{
     background: var(--hvr-color);
 }
+#contex-menu .item button{
+    border: none;
+    outline: none;
+    background: transparent;
+}
 #contex-menu .item i{
     display: inline-block;
     margin-right: 5px;
@@ -282,21 +287,7 @@ nav ul li a:hover{
     padding: 10px;
     font-size: 18px;
 }
-@media (max-width: 991px){
-    .contact {
-        padding: 50px;
-    }
-    .paras {
-        flex-direction: column;
-    }
-    .paras .contactInfo {
-        margin-bottom: 40px;
-    }
-    .paras .contactInfo,
-    .contactForm {
-        width: 100%;
-    }
-}
+
 /* Footer Section */
 .footer{
     background: #24262b;
@@ -361,4 +352,27 @@ nav ul li a:hover{
     position: absolute;
     padding-left: 13px;
     bottom: 35px;
+}
+
+@media (max-width: 320px){
+    .contact {
+        padding: 50px;
+    }
+    .paras {
+        flex-direction: column;
+    }
+    .paras .contactInfo {
+        margin-bottom: 40px;
+    }
+    .paras .contactInfo,
+    .contactForm {
+        width: 100%;
+    }
+
+    .qr img{
+        padding-left: 155px;
+    }
+    .qr p{
+        padding-left: 155px;
+    }
 }

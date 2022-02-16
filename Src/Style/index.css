@@ -118,6 +118,11 @@ nav ul li a:hover{
 #contex-menu .item:hover{
     background: var(--hvr-color);
 }
+#contex-menu .item button{
+    border: none;
+    outline: none;
+    background: transparent;
+}
 #contex-menu .item i{
     display: inline-block;
     margin-right: 5px;

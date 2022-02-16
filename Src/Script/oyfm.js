@@ -1,4 +1,3 @@
-document.addEventListener('contextmenu', event => event.preventDefault());
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
@@ -121,3 +120,14 @@ let update = () => {
 };
 
 update();
+
+window.addEventListener('contextmenu', function(event){
+    event.preventDefault();
+    var contextElement = document.getElementById("contex-menu")
+    contextElement.style.left = event.pageX + "px";
+    contextElement.style.top = event.pageY + "px";
+    contextElement.classList.add("active");
+});
+window.addEventListener("click", function(){
+    document.getElementById("contex-menu").classList.remove("active")
+});
