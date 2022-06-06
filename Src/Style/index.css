@@ -1,5 +1,6 @@
 @import "https://fonts.googleapis.com/css?family=ABeeZee";
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -7,20 +8,22 @@
     font-family: 'ABeeZee';
 }
 
-:root{
+:root {
     --primary-color: #fdfdfd;
     --secondary-color: #212121;
     --nav-color: #ff4321;
     --fixed-color: #fff;
     --hvr-color: #494949;
 }
-.darkmode{
+
+.darkmode {
     --primary-color: #212121;
     --secondary-color: #fdfdfd;
     --fixed-color: #fff;
     --hvr-color: #d1d1d1;
 }
-.deep{
+
+.deep {
     background: var(--secondary-color);
     padding: 0.5rem 1.5rem;
     border-radius: 0 0 0.25rem 0.25rem;
@@ -31,18 +34,20 @@
     text-decoration: none;
     color: var(--primary-color);
 }
-.deep:focus{
+
+.deep:focus {
     transform: translateY(0);
 }
-#navbar{
-    height: 15vh;
+
+#navbar {
+    height: 150vh;
     width: 100%;
     background: var(--primary-color);
     font-family: sans-serif;
-    /* position: relative; */
+    position: relative;
 }
 
-nav{
+nav {
     width: 84%;
     margin: auto;
     padding: 20px;
@@ -50,41 +55,48 @@ nav{
     align-items: center;
     justify-content: space-between;
 }
-.logo{
+
+.logo {
     width: 100px;
     height: auto;
     cursor: pointer;
 }
-nav ul{
+
+nav ul {
     flex: 1;
     text-align: right;
 }
-nav ul li{
+
+nav ul li {
     display: inline-block;
     list-style: none;
     margin: 10px 20px;
 }
-nav ul li .active{
-    border:  2px var(--nav-color) solid;
+
+nav ul li .active {
+    border: 2px var(--nav-color) solid;
     color: var(--secondary-color);
     border-radius: 12px;
     padding: 15px 5px;
     margin-left: -15px;
 }
-nav ul li .active:hover{
+
+nav ul li .active:hover {
     background-color: var(--nav-color);
     color: var(--secondary-color);
 }
-nav ul li a{
+
+nav ul li a {
     text-decoration: none;
     color: var(--secondary-color);
 }
-nav ul li a:hover{
+
+nav ul li a:hover {
     color: var(--nav-color);
-    transition: 0.5s ease-in-out; 
+    transition: 0.5s ease-in-out;
 }
 
-.dark-mode-toggle{
+.dark-mode-toggle {
     top: 1em;
     right: 1em;
     color: var(--secondary-color);
@@ -97,7 +109,7 @@ nav ul li a:hover{
     outline: none;
 }
 
-#contex-menu{
+#contex-menu {
     position: absolute;
     z-index: 10;
     width: 150px;
@@ -107,47 +119,56 @@ nav ul li a:hover{
     border: solid var(--primary-color);
     outline: solid var(--secondary-color);
 }
-#contex-menu.active{
+
+#contex-menu.active {
     transform: scale(1);
 }
-#contex-menu .item{
+
+#contex-menu .item {
     padding: 8px 10px;
     font-size: 15px;
-    color: var(--primary-color);
+
 }
-#contex-menu .item:hover{
+
+#contex-menu .item:hover {
     background: var(--hvr-color);
 }
-#contex-menu .item button{
+
+#contex-menu .item button {
     border: none;
     outline: none;
     background: transparent;
+    color: var(--primary-color)
 }
-#contex-menu .item i{
+
+#contex-menu .item i {
     display: inline-block;
     margin-right: 5px;
 }
 
-.card{
-    position: relative;
+.card {
+    position: absolute;
     width: 360px;
     min-height: 400px;
-    background: var(--primary-color);
+    background-color: var(--primary-color);
     box-shadow: 15px 15px 60px var(--secondary-color);
-    margin: 50px 0 50px 20px;
+    margin-left: 25px;
+    top: 200px;
     padding: 20px;
 }
-.card .top{
+
+.card .top {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.card .top .userDetails{
+
+.card .top .userDetails {
     display: flex;
-    align-items: center;    
+    align-items: center;
 }
 
-.card .top .userDetails .profile_img{
+.card .top .userDetails .profile_img {
     position: relative;
     width: 36px;
     height: 36px;
@@ -156,7 +177,7 @@ nav ul li a:hover{
     margin-right: 8px;
 }
 
-.cover{
+.cover {
     position: absolute;
     top: 0;
     left: 0;
@@ -165,51 +186,91 @@ nav ul li a:hover{
     object-fit: cover;
 }
 
-.card .top .userDetails h3{
+.card .top .userDetails h3 {
     /* font-family: ; */
     font-size: 16px;
-    color:var(--secondary-color);
+    color: var(--secondary-color);
     font-weight: 500;
     line-height: 1em;
 }
-.dot{
+
+.dot {
     transform: scale(0.6);
     cursor: pointer;
     fill: var(--secondary-color);
 }
-.imgBx{
+
+.card h2 {
+    color: var(--secondary-color);
+    font-size: medium;
+    margin-top: 20px;
+}
+
+.imgBx {
     position: relative;
     width: 100%;
-    height: 320px;
+    height: 200px;
     margin: 10px 0 15px;
 }
 
-.footer{
+.download {
+    background-color: var(--nav-color);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: medium;
+    text-align: center;
+    padding: 20px 0px 25px;
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+    width: 50%;
+    color: var(--primary-color);
+}
+
+.alter {
+    background-color: green;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: medium;
+    text-align: center;
+    padding: 20px 10px 25px;
+    margin-left: 5px;
+    text-decoration: none;
+    border: none;
+    width: 50%;
+    color: var(--fixed-color);
+}
+
+.footer {
     background: #24262b;
     padding: 30px 0;
 }
-.container{
+
+.container {
     max-width: 1170px;
     margin: auto;
     position: relative;
 }
-.row{
+
+.row {
     display: flex;
     flex-wrap: wrap;
 }
+
 .footer-col-1 {
     width: 25%;
     padding: 0 15px;
 }
-.footer-col-1 h4 a{
+
+.footer-col-1 h4 a {
     font-size: 18px;
     color: var(--fixed-color);
     text-decoration: none;
 }
+
 .footer-col-1 p {
     color: var(--fixed-color);
     font-size: 14px;
 }
+
 .footer-col-2 ul {
     list-style: none;
     width: 25%;
@@ -217,33 +278,40 @@ nav ul li a:hover{
     display: inline;
     margin-bottom: 3px;
 }
+
 .footer-col-2 ul li {
     margin-bottom: 5px;
-    
+
 }
-.footer-col-2 ul li a{
+
+.footer-col-2 ul li a {
     color: var(--fixed-color);
     text-decoration: none;
 }
+
 .footer-col-2 ul li a:hover {
     color: var(--nav-color);
     text-decoration: none;
 }
+
 .footer-col-2 h4 {
     font-size: 18px;
     color: var(--fixed-color);
 }
-.qr img{
+
+.qr img {
     height: 100px;
     width: auto;
     padding-left: 655px;
 }
-.qr p{
+
+.qr p {
     color: var(--fixed-color);
     font-size: 16px;
     padding-left: 655px;
 }
-.license{
+
+.license {
     position: absolute;
     padding-left: 13px;
     bottom: 35px;
