@@ -1,13 +1,13 @@
 var logo = document.getElementById('logo');
-logo.onclick = function(){location.reload()};
-window.addEventListener('contextmenu', function(event){
+logo.onclick = function () { location.reload() };
+window.addEventListener('contextmenu', function (event) {
     event.preventDefault();
     var contextElement = document.getElementById("contex-menu")
     contextElement.style.left = event.pageX + "px";
     contextElement.style.top = event.pageY + "px";
     contextElement.classList.add("active");
 });
-window.addEventListener("click", function(){
+window.addEventListener("click", function () {
     document.getElementById("contex-menu").classList.remove("active")
 })
 
@@ -34,3 +34,25 @@ darkModeToggle.addEventListener('click', () => {
         disableDarkMode();
     }
 });
+
+var percent = document.querySelector(".percent");
+var progress = document.querySelector(".progress");
+var text = document.querySelector(".text");
+var preloader = document.querySelector('.loader');
+let count = 4;
+let per = 16;
+var loading = setInterval(animate, 50);
+
+function animate() {
+    if (count == 100 && per == 400) {
+        percent.classList.add("text-blink");
+        text.style.display = "block";
+        clearInterval(loading);
+        preloader.style.display = "none";
+    } else {
+        per = per + 4;
+        count = count + 1;
+        progress.style.width = per + "px";
+        percent.textContent = count + '%';
+    }
+}

@@ -13,15 +13,82 @@
     --secondary-color: #212121;
     --nav-color: #ff4321;
     --fixed-color: #fff;
+    --loader-color: rgba(216, 198, 198, 0.514);
     --hvr-color: #494949;
 }
-
 .darkmode {
     --primary-color: #212121;
     --secondary-color: #fdfdfd;
     --fixed-color: #fff;
     --hvr-color: #d1d1d1;
 }
+
+/* preloader */
+.loader{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--loader-color);
+    
+}
+.percent{
+    color:var(--fixed-color);
+    font-size: 100px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 15px;
+    position: relative;
+    top: 30%;
+}
+.text{
+    position: absolute;
+    left: 160px;
+    color: #fdb5ca;
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height: 21px;
+    display: none;
+}
+.text-blink{
+    animation: blink .7s ease-in-out .1s;
+}
+@keyframes blink{
+    0%{
+        opacity: 1;
+
+    }
+    50%{
+        opacity: .2;
+
+    }
+    100%{
+        opacity: 1;
+
+    }
+}
+.progress-bar{
+    width: 406px;
+    height: 21px;
+    background: #111;
+    border-radius: 13px;
+    padding: 3px;
+    box-sizing: border-box;
+    position: relative;
+    top: 30%;
+    left: 34.5%;
+}
+.progress{
+    width: 200px;
+    height: 15px;
+    background: var(--nav-color);
+    border-radius: 13px;
+    position: relative;
+}
+/* end preloader */
+
 
 .deep {
     background: var(--secondary-color);
@@ -57,7 +124,8 @@ nav {
 }
 
 .logo {
-    width: 100px;
+    padding-top: 5px;
+    width: 50px;
     height: auto;
     cursor: pointer;
 }

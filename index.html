@@ -14,8 +14,9 @@
     <meta name="description" content="Personal WorkSpace.">
 </head>
 
-<body>
+<body onload="loading()">
 
+    
     <div id="header">
         <div id="navbar">
             <a class="deep" href="./Src/Pages/oyfm.html">Wanna Go?</a>
@@ -37,6 +38,14 @@
             </nav>
         </div>
 
+        <div class="loader">
+            <div class="percent">100%</div>
+            <div class="text">Completed!</div>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+        </div>
+
         <main id="contex-menu">
             <div class="item">
                 <button onClick="window.location.reload()"><i class="bi bi-arrow-clockwise"></i> Reload</button>
@@ -45,29 +54,6 @@
                 <button onclick="javascript:window.close()"><i class="bi bi-x-circle"></i> Exit</button>
             </div>
         </main>
-        <div class="card">
-            <div class="top">
-                <div class="userDetails">
-                    <div class="profile_img">
-                        <img src="/Assets/profile.jpg" alt="Ashley Man" class="cover">
-                    </div>
-                    <h3>null_patch</h3>
-                </div>
-                <div>
-                    <svg class="dot " height="50" role="img" viewBox="0 0 24 24" width="50">
-                        <circle cx="12" cy="12" r="1.5"></circle>
-                        <circle cx="6" cy="12" r="1.5"></circle>
-                        <circle cx="18" cy="12" r="1.5"></circle>
-                    </svg>
-                </div>
-            </div>
-            <h2>Minecraft Datapack Download</h2>
-            <div class="imgBx">
-                <img src="https://filterforge.com/filters/12126.jpg"class="cover">
-            </div>
-            <a class="download" href="https://www.dropbox.com/s/p0hyemmisvihctw/Simple%20Gravel.zip?dl=1">Download Now!</a>
-            <a class="alter" href="https://www.planetminecraft.com/data-pack/simple-gravel-amp-clay/">Planet Minecraft</a>
-        </div>
     </div>
 
 
@@ -101,7 +87,6 @@
             </div>
         </div>
     </footer>
-    <script src="/Src/Script/index.js"></script>
     <script src="/Src/Script/base_events.js"></script>
 </body>
 
