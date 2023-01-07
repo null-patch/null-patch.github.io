@@ -1,0 +1,39 @@
+<div id="header">
+    <div id="navbar">
+        <a class="deep" href="/Src/Pages/oyfm.html">Wanna Go?</a>
+        <nav class="navigation">
+            <img src="/Assets/logo.png" class="logo" id="logo"><p> null.patch</p>
+            <ul>
+                <li><a href="#Home" onclick="show('page1');"><i class="bi bi-house-fill"></i> Home</a></li>
+                <li><a href="#About_Me" onclick="show('page2');"><i class="bi bi-person-circle"></i> About Me</a></li>
+                <li><a href="#Contact_Me" onclick="show('page3');"><i class=" bi bi-phone-fill"></i> Contact me</a></li>
+            </ul>
+            <button id="dark-mode-toggle" class="dark-mode-toggle">
+                <svg width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 496">
+                    <path fill="currentColor"
+                        d="M8,256C8,393,119,504,256,504S504,393,504,256,393,8,256,8,8,119,8,256ZM256,440V72a184,184,0,0,1,0,368Z"
+                        transform="translate(-8 -8)">
+                    </path>
+                </svg>
+            </button>
+        </nav>
+    </div>
+
+    <div class="loader">
+        <div class="percent">100%</div>
+        <div class="text">Completed!</div>
+        <div class="progress-bar">
+            <div class="progress"></div>
+        </div>
+    </div>
+
+    <main id="contex-menu">
+        <div class="item">
+            <button onClick="window.location.reload()"><i class="bi bi-arrow-clockwise"></i> Reload</button>
+        </div>
+        <div class="item">
+            <button onclick="javascript:window.close()"><i class="bi bi-x-circle"></i> Exit</button>
+        </div>
+    </main>
+    <script src="/Src/Script/base_events.js"></script>
+</div>

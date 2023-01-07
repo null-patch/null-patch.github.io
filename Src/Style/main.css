@@ -1,5 +1,6 @@
 @import "https://fonts.googleapis.com/css?family=ABeeZee";
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -7,32 +8,123 @@
     font-family: 'ABeeZee';
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-:root{
+:root {
     --primary-color: #fdfdfd;
     --secondary-color: #212121;
     --nav-color: #ff4321;
     --fixed-color: #fff;
+    --loader-color: rgba(216, 198, 198, 0.514);
+    --hvr-color: #494949;
 }
+
 .darkmode {
-    --primary-color: #121212;
+    --primary-color: #212121;
     --secondary-color: #fdfdfd;
     --fixed-color: #fff;
+    --hvr-color: #d1d1d1;
 }
-/* NavBar */
 
-#navbar{
+/* preloader */
+.loader {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--loader-color);
+
+}
+
+.percent {
+    color: var(--fixed-color);
+    font-size: 100px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 15px;
+    position: relative;
+    top: 30%;
+}
+
+.text {
+    position: absolute;
+    left: 160px;
+    color: #fdb5ca;
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height: 21px;
+    display: none;
+}
+
+.text-blink {
+    animation: blink .7s ease-in-out .1s;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+
+    }
+
+    50% {
+        opacity: .2;
+
+    }
+
+    100% {
+        opacity: 1;
+
+    }
+}
+
+.progress-bar {
+    width: 406px;
+    height: 21px;
+    background: #111;
+    border-radius: 13px;
+    padding: 3px;
+    box-sizing: border-box;
+    position: relative;
+    top: 30%;
+    left: 34.5%;
+}
+
+.progress {
+    width: 200px;
+    height: 15px;
+    background: var(--nav-color);
+    border-radius: 13px;
+    position: relative;
+}
+
+/* end preloader */
+
+
+.deep {
+    background: var(--secondary-color);
+    padding: 0.5rem 1.5rem;
+    border-radius: 0 0 0.25rem 0.25rem;
+    position: absolute;
+    left: .5rem;
+    transform: translateY(-120%);
+    transition: transform 325ms ease-in;
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.deep:focus {
+    transform: translateY(0);
+}
+
+#navbar {
+    height: 5vh;
     width: 100%;
     background: var(--primary-color);
     font-family: sans-serif;
     position: relative;
 }
 
-nav{
+nav {
     width: 84%;
     margin: auto;
     padding: 20px;
@@ -40,41 +132,55 @@ nav{
     align-items: center;
     justify-content: space-between;
 }
-.logo{
-    width: 100px;
+
+.logo {
+    padding-top: 5px;
+    width: 50px;
     height: auto;
     cursor: pointer;
 }
-nav ul{
+
+.navigation p {
+    position: absolute;
+    color: var(--secondary-color);
+    right: 1030px;
+    font-size: 30px;
+    font-weight: bolder;
+    text-transform: capitalize;
+}
+
+.navigation ul {
     flex: 1;
     text-align: right;
 }
-nav ul li{
+
+.navigation ul li {
     display: inline-block;
     list-style: none;
     margin: 10px 20px;
 }
-nav ul li .active{
-    border:  2px var(--nav-color) solid;
-    border-radius: 12px;
-    color: var(--secondary-color);
-    padding: 15px 5px;
-    margin-left: -15px;
-}
-nav ul li .active:hover{
-    background-color: var(--nav-color);
-    color: var(--secondary-color);
-}
-nav ul li a{
+
+.navigation ul li a {
     text-decoration: none;
     color: var(--secondary-color);
 }
-nav ul li a:hover{
+
+.navigation ul li a:hover {
     color: var(--nav-color);
     transition: 0.5s ease-in-out;
 }
 
-.dark-mode-toggle{
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.sticky+.content {
+    padding-top: 60px;
+}
+
+.dark-mode-toggle {
     top: 1em;
     right: 1em;
     color: var(--secondary-color);
@@ -86,7 +192,8 @@ nav ul li a:hover{
     height: 30px;
     outline: none;
 }
-#contex-menu{
+
+#contex-menu {
     position: absolute;
     z-index: 10;
     width: 150px;
@@ -96,32 +203,129 @@ nav ul li a:hover{
     border: solid var(--primary-color);
     outline: solid var(--secondary-color);
 }
-#contex-menu.active{
+
+#contex-menu.active {
     transform: scale(1);
 }
-#contex-menu .item{
+
+#contex-menu .item {
     padding: 8px 10px;
     font-size: 15px;
-    color: var(--primary-color);
+
 }
-#contex-menu .item:hover{
+
+#contex-menu .item:hover {
     background: var(--hvr-color);
 }
-#contex-menu .item button{
+
+#contex-menu .item button {
     border: none;
     outline: none;
     background: transparent;
+    color: var(--primary-color)
 }
-#contex-menu .item i{
+
+#contex-menu .item i {
     display: inline-block;
     margin-right: 5px;
 }
-/* Contacts */
 
-.contact{
+
+.footer {
+    background: #24262b;
+    padding: 30px 0;
+}
+
+.container {
+    max-width: 1170px;
+    margin: auto;
+    position: relative;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-col-1 {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col-1 h4 a {
+    font-size: 18px;
+    color: var(--fixed-color);
+    text-decoration: none;
+}
+
+.footer-col-1 p {
+    color: var(--fixed-color);
+    font-size: 14px;
+}
+
+.footer-col-2 ul {
+    list-style: none;
+    width: 25%;
+    padding: 0 15px;
+    display: inline;
+    margin-bottom: 3px;
+}
+
+.footer-col-2 ul li {
+    margin-bottom: 5px;
+
+}
+
+.footer-col-2 ul li a {
+    color: var(--fixed-color);
+    text-decoration: none;
+}
+
+.footer-col-2 ul li a:hover {
+    color: var(--nav-color);
+    text-decoration: none;
+}
+
+.footer-col-2 h4 {
+    font-size: 18px;
+    color: var(--fixed-color);
+}
+
+.license {
+    position: absolute;
+    padding-left: 13px;
+    bottom: 35px;
+}
+
+.active{
+    border: 2px var(--nav-color) solid;
+    color: var(--secondary-color);
+    border-radius: 12px;
+    padding: 15px 5px;
+    margin-left: -15px;
+}
+.active:hover{
+    background-color: var(--nav-color);
+    color: var(--secondary-color);
+}
+
+/* Article Pg 1 */
+.page1 {
+    background: var(--primary-color);
+    height: 420px;
+    display: block;
+}
+
+#page2 {
+    background: var(--primary-color);
+    height: 420px;
+}
+
+/* Contract Form */
+#page3
+.contact {
     background: var(--primary-color);
     color: var(--secondary-color);
-    position: relative;
     min-height: 100vh;
     padding: 50px 100px;
     display: flex;
@@ -129,73 +333,50 @@ nav ul li a:hover{
     align-items: center;
     flex-direction: column;
 }
+
 .contact .content {
     max-width: 800px;
     text-align: center;
 }
+
 .contact .content h2 {
     font-size: 36px;
     font-weight: 500;
     color: var(--secondary-color);
     text-shadow: 0 0 0.125em var(--secondary-color), 0 0 0.45em currentColor;
 }
+
 .contact .content p {
     font-weight: 500;
 }
-.paras{
+
+.paras {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 30px;
 }
-.paras .contactInfo {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-}
-.paras .contactInfo .box {
-    position: relative;
-    padding: 20px 0;
-    display: flex;
-}
-.paras .contactInfo .box .icon {
-    min-width: 60px;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    font-size: 22px;
-}
-.paras .contactInfo .box .text {
-    display: flex;
-    margin-left: 20px;
-    font-size: 16px;
-    flex-direction: column;
-    font-weight: 300;
-}
-.paras .contactInfo .box .text h3{
-    font-weight: 500;
-    padding-left: 40px;
-    margin-bottom: 5px;
-}
-.contactForm{
+
+.contactForm {
     width: 40%;
     padding: 40px;
     background-color: var(--primary-color);
 }
+
 .contactForm h2 {
     font-size: 30px;
     font-weight: 500;
     color: var(--secondary-color);
 }
+
 .contactForm .inputbox {
     position: relative;
     width: 100%;
     margin-top: 10px;
 }
-.contactForm .inputbox .neon-button{
+
+.contactForm .inputbox .neon-button {
     display: inline-block;
     text-decoration: none;
     width: 100%;
@@ -207,11 +388,12 @@ nav ul li a:hover{
     box-shadow: inset 0 0 0.5em 0 var(--secondary-color), 0 0 0.5em 0 var(--secondary-color);
     position: relative;
 }
-.contactForm .inputbox .neon-button::before{
+
+.contactForm .inputbox .neon-button::before {
     pointer-events: none;
     content: "";
     position: absolute;
-    background: var(--secondary-color); /* cant touch */
+    background: var(--secondary-color);
     top: 120%;
     left: 0;
     width: 100%;
@@ -220,7 +402,8 @@ nav ul li a:hover{
     filter: blur(1em);
     opacity: 0.7;
 }
-.contactForm .inputbox .neon-button::after{
+
+.contactForm .inputbox .neon-button::after {
     content: "";
     position: absolute;
     top: 0;
@@ -233,20 +416,24 @@ nav ul li a:hover{
     z-index: -1;
     transition: opacity 100ms linear;
 }
+
 .contactForm .inputbox .neon-button:hover,
-.contactForm .inputbox .neon-button:focus{
+.contactForm .inputbox .neon-button:focus {
     color: var(--primary-color);
     transition: 0.4s ease-in-out;
     text-shadow: none;
 }
+
 .contactForm .inputbox .neon-button:hover::before,
 .contactForm .inputbox .neon-button:focus::before {
     opacity: 1;
 }
+
 .contactForm .inputbox .neon-button:hover::after,
 .contactForm .inputbox .neon-button:focus::after {
-  opacity: 1;
+    opacity: 1;
 }
+
 .contactForm .inputbox input,
 .contactForm .inputbox textarea {
     width: 100%;
@@ -260,6 +447,7 @@ nav ul li a:hover{
     outline: none;
     resize: none;
 }
+
 .contactForm .inputbox span {
     position: absolute;
     left: 0;
@@ -270,15 +458,17 @@ nav ul li a:hover{
     transition: 0.5s;
     color: #666;
 }
-.contactForm .inputbox input:focus ~ span,
-.contactForm .inputbox input:valid ~ span,     
-.contactForm .inputbox textarea:focus ~ span,
-.contactForm .inputbox textarea:valid ~ span {
+
+.contactForm .inputbox input:focus~span,
+.contactForm .inputbox input:valid~span,
+.contactForm .inputbox textarea:focus~span,
+.contactForm .inputbox textarea:valid~span {
     color: #e91e61;
     font-size: 12px;
     transform: translateY(-20px);
 }
-.contactForm .inputbox button{
+
+.contactForm .inputbox button {
     width: 100px;
     background: var(--secondary-color);
     color: var(--primary-color);
@@ -287,93 +477,4 @@ nav ul li a:hover{
     cursor: pointer;
     padding: 10px;
     font-size: 18px;
-}
-
-/* Footer Section */
-.footer{
-    background: #24262b;
-    padding: 30px 0;
-}
-.container{
-    max-width: 1170px;
-    margin: auto;
-    position: relative;
-}
-.row{
-    display: flex;
-    flex-wrap: wrap;
-}
-.footer-col-1 {
-    width: 25%;
-    padding: 0 15px;
-}
-.footer-col-1 h4 a{
-    font-size: 18px;
-    color: var(--fixed-color);
-    text-decoration: none;
-}
-.footer-col-1 p {
-    color: var(--fixed-color);
-    font-size: 14px;
-}
-.footer-col-2 ul {
-    list-style: none;
-    width: 25%;
-    padding: 0 15px;
-    display: inline;
-    margin-bottom: 3px;
-}
-.footer-col-2 ul li {
-    margin-bottom: 5px;
-    
-}
-.footer-col-2 ul li a{
-    color: var(--fixed-color);
-    text-decoration: none;
-}
-.footer-col-2 ul li a:hover {
-    color: #ff4321;
-    text-decoration: none;
-}
-.footer-col-2 h4 {
-    font-size: 18px;
-    color: var(--fixed-color);
-}
-.qr img{
-    height: 100px;
-    width: auto;
-    padding-left: 655px;
-}
-.qr p{
-    color: var(--fixed-color);
-    font-size: 16px;
-    padding-left: 655px;
-}
-.license{
-    position: absolute;
-    padding-left: 13px;
-    bottom: 35px;
-}
-
-@media (max-width: 320px){
-    .contact {
-        padding: 50px;
-    }
-    .paras {
-        flex-direction: column;
-    }
-    .paras .contactInfo {
-        margin-bottom: 40px;
-    }
-    .paras .contactInfo,
-    .contactForm {
-        width: 100%;
-    }
-
-    .qr img{
-        padding-left: 155px;
-    }
-    .qr p{
-        padding-left: 155px;
-    }
 }
