@@ -1,0 +1,189 @@
+<section class="contact">
+    <div class="content">
+        <h2>Contact Me</h2>
+        <p>Having an issue? Please feel free to contact me.</p>
+    </div>
+    <div class="paras">
+        <div class="contactForm">
+            <form action="mailto:ashleyman004@gmail.com" method="POST" id="my-form" enctype="text/plain"
+                name="EmailForm">
+                <h2>Send Message</h2>
+                <div class="inputbox">
+                    <input type="text" name="Name" required="required">
+                    <span>Full Name</span>
+                </div>
+                <div class="inputbox">
+                    <input type="email" id="email" name="Email" required="required">
+                    <span>Email</span>
+                </div>
+                <div class="inputbox">
+                    <textarea name="Message" required="required" id="message"></textarea>
+                    <span>Type Your Message...</span>
+                    <input type="hidden" name="subject" value="New submission from {{email}}">
+                </div>
+                <div class="inputbox">
+                    <button type="submit" value="Send" class="neon-button">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<script src="/Src/Script/contract.js"></script>
+
+
+--------css-------
+/* .contact {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact .content {
+    max-width: 800px;
+    text-align: center;
+}
+
+.contact .content h2 {
+    font-size: 36px;
+    font-weight: 500;
+    color: var(--secondary-color);
+    text-shadow: 0 0 0.125em var(--secondary-color), 0 0 0.45em currentColor;
+}
+
+.contact .content p {
+    font-weight: 500;
+}
+
+.paras {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.contactForm {
+    width: 40%;
+    padding: 40px;
+    background-color: var(--primary-color);
+}
+
+.contactForm h2 {
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--secondary-color);
+}
+
+.contactForm .inputbox {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contactForm .inputbox .neon-button {
+    display: inline-block;
+    text-decoration: none;
+    width: 100%;
+    color: var(--primary-color);
+    border: var(--secondary-color) 0.125em solid;
+    padding: 0.25em 1em;
+    border-radius: 0.25em;
+    text-shadow: 0 0 0.125em rgba(255, 255, 255, 0.377), 0 0 0.45em currentColor;
+    box-shadow: inset 0 0 0.5em 0 var(--secondary-color), 0 0 0.5em 0 var(--secondary-color);
+    position: relative;
+}
+
+.contactForm .inputbox .neon-button::before {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    background: var(--secondary-color);
+    top: 120%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
+    filter: blur(1em);
+    opacity: 0.7;
+}
+
+.contactForm .inputbox .neon-button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0 2em 0.5em var(--secondary-color);
+    opacity: 0;
+    background-color: var(--primary-color);
+    z-index: -1;
+    transition: opacity 100ms linear;
+}
+
+.contactForm .inputbox .neon-button:hover,
+.contactForm .inputbox .neon-button:focus {
+    color: var(--primary-color);
+    transition: 0.4s ease-in-out;
+    text-shadow: none;
+}
+
+.contactForm .inputbox .neon-button:hover::before,
+.contactForm .inputbox .neon-button:focus::before {
+    opacity: 1;
+}
+
+.contactForm .inputbox .neon-button:hover::after,
+.contactForm .inputbox .neon-button:focus::after {
+    opacity: 1;
+}
+
+.contactForm .inputbox input,
+.contactForm .inputbox textarea {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    outline: none;
+    resize: none;
+}
+
+.contactForm .inputbox span {
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+
+.contactForm .inputbox input:focus~span,
+.contactForm .inputbox input:valid~span,
+.contactForm .inputbox textarea:focus~span,
+.contactForm .inputbox textarea:valid~span {
+    color: #e91e61;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+
+.contactForm .inputbox button {
+    width: 100px;
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+} */

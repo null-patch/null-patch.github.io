@@ -23,12 +23,11 @@
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 
-<!-- <body onload="loading()"> -->
+<body onload="loading()">
 
-<body>
     <div id="header"></div>
 
-    <div style="" class="page" id="page1" class="acive">
+    <div style="display:block" class="page" id="page1">
         <article class="page1">
 
         </article>
@@ -36,54 +35,26 @@
 
     <div id="page2" class="page" style="display:none">
         <article class="page2">
-                
+
         </article>
     </div>
     <!-- Contract me page  -->
     <div id="page3" class="page" style="display:none">
 
-        <section class="contact">
-            <div class="content">
-                <h2>Contact Me</h2>
-                <p>Having an issue? Please feel free to contact me.</p>
-            </div>
-            <div class="paras">
-                <div class="contactForm">
-                    <form action="https://formspree.io/f/xpzbznap" method="POST" id="my-form">
-                        <h2>Send Message</h2>
-                        <div class="inputbox">
-                            <input type="text" name="Name" required="required">
-                            <span>Full Name</span>
-                        </div>
-                        <div class="inputbox">
-                            <input type="email" id="email" name="Email" required="required">
-                            <span>Email</span>
-                        </div>
-                        <div class="inputbox">
-                            <textarea name="Message" required="required" id="message"></textarea>
-                            <span>Type Your Message...</span>
-                            <input type="hidden" name="subject" value="New submission from {{email}}">
-                        </div>
-                        <div class="inputbox">
-                            <button type="submit" class="neon-button">Send</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
+      
     </div>
 
     <div id="footer"></div>
 
     <script src="/Src/Script/base_events.js"></script>
-    <!-- <script src="Src/Script/con-us.js"></script> -->
+    
     <script>
         $(function () {
             $("#header").load("./Src/Pages/nav.html");
             $("#footer").load("./Src/Pages/footer.html");
         });
     </script>
-    
+
 </body>
 
 </html>
