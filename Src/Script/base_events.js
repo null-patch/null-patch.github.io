@@ -1,6 +1,3 @@
-var logo = document.getElementById('logo');
-logo.onclick = function () { location.reload() };
-
 window.addEventListener('contextmenu', function (event) {
     event.preventDefault();
     var contextElement = document.getElementById("contex-menu")
@@ -69,5 +66,4 @@ function show(elementID) {
         pages[i].style.display = 'none';
     }
     ele.style.display = 'block';
-    ele.classList.add = 'active';
 }
