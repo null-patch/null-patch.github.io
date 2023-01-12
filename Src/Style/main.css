@@ -317,5 +317,6 @@ article{
 }
 .about-me .button:hover{
     transition: ease-in-out .5s;
-    color: var(--nav-color);
+    background-color: var(--nav-color);
+    
 } 
