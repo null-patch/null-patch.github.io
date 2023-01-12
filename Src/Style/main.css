@@ -149,22 +149,7 @@ body{
     color: var(--nav-color);
     transition: 0.5s ease-in-out
 }
-/* #tgl-btn{
-    position: absolute;
-    top: 40px;
-    right: 4rem;
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 21px;
-}
-#tgl-btn .bar{
-    height: 3px;
-    width: 100%;
-    background-color: var(--secondary-color);
-    border-radius: 10px;
-} */
+
 
 .dark-mode-toggle {
     top: 1em;
@@ -282,10 +267,10 @@ body{
     padding-left: 13px;
     bottom: 35px;
 }
-/* article{
+article{
     background-color: var(--primary-color);
-} */
-/* .about-me {
+}
+.about-me {
     background-color: var(--primary-color);
     height: auto;
     text-align: center;
@@ -333,4 +318,4 @@ body{
 .about-me .button:hover{
     transition: ease-in-out .5s;
     color: var(--nav-color);
-} */
+} 
