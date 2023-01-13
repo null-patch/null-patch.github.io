@@ -151,7 +151,7 @@ body{
 }
 
 
-.dark-mode-toggle {
+#dark-mode-toggle {
     top: 1em;
     right: 1em;
     color: var(--secondary-color);
@@ -263,7 +263,7 @@ body{
 }
 
 .license {
-    position: absolute;
+    position: relative;
     padding-left: 13px;
     bottom: 35px;
 }

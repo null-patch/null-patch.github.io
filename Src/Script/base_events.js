@@ -7,10 +7,10 @@ window.addEventListener('contextmenu', function (event) {
 });
 window.addEventListener("click", function () {
     document.getElementById("contex-menu").classList.remove("active")
-})
+});
 
 let darkMode = localStorage.getItem('darkMode');
-const darkModeToggle = document.querySelector('#dark-mode-toggle');
+const darkModeToggle = document.getElementById('dark-mode-toggle');
 const enableDarkMode = () => {
     document.body.classList.add('darkmode');
     localStorage.setItem('darkMode', 'enabled');
@@ -24,14 +24,15 @@ if (darkMode === 'enabled') {
     enableDarkMode();
 }
 
-darkModeToggle.addEventListener('click', () => {
+function changeColor() {
     darkMode = localStorage.getItem('darkMode');
     if (darkMode !== 'enabled') {
         enableDarkMode();
     } else {
         disableDarkMode();
     }
-});
+};
+
 
 var percent = document.querySelector(".percent");
 var progress = document.querySelector(".progress");
@@ -53,7 +54,7 @@ function animate() {
         progress.style.width = per + "px";
         percent.textContent = count + '%';
     }
-}
+};
 
 function show(elementID) {
     const ele = document.getElementById(elementID);
