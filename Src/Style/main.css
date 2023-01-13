@@ -6,6 +6,7 @@
 }
 body{
     font-family: 'ABeeZee';
+    text-decoration: none;
 }
 
 :root {
@@ -224,15 +225,15 @@ body{
     padding: 0 15px;
 }
 
-.footer-col-1 h4 a {
+.footer-col-1 h4 {
     font-size: 18px;
     color: var(--fixed-color);
-    text-decoration: none;
 }
 
 .footer-col-1 p {
     color: var(--fixed-color);
     font-size: 14px;
+    padding-top: 5px;
 }
 
 .footer-col-2 ul {
@@ -269,6 +270,11 @@ body{
 }
 article{
     background-color: var(--primary-color);
+}
+
+.home{
+    text-align: center;
+    padding: 10% 0px 14.7% 0px;
 }
 .about-me {
     background-color: var(--primary-color);
