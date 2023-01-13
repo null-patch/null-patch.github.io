@@ -9,23 +9,45 @@ window.addEventListener("click", function () {
     document.getElementById("contex-menu").classList.remove("active")
 });
 
-let darkMode = localStorage.getItem('darkMode');
-const darkModeToggle = document.getElementById('dark-mode-toggle');
+const setCookie = function setCookie(cname, cvalue, exdays) {
+    const d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    let expires = "expires=" + d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+};
+const getCookie = function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+};
+
+let darkMode = getCookie('darkMode');
+
 const enableDarkMode = () => {
     document.body.classList.add('darkmode');
-    localStorage.setItem('darkMode', 'enabled');
+    setCookie('darkMode', 'enabled');
 }
 
 const disableDarkMode = () => {
     document.body.classList.remove('darkmode');
-    localStorage.setItem('darkMode', null);
+    setCookie('darkMode', "disabled");
 }
 if (darkMode === 'enabled') {
     enableDarkMode();
 }
 
 function changeColor() {
-    darkMode = localStorage.getItem('darkMode');
+    darkMode = getCookie('darkMode');
     if (darkMode !== 'enabled') {
         enableDarkMode();
     } else {
