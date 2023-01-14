@@ -4,7 +4,8 @@
     margin: 0;
     padding: 0;
 }
-body{
+
+body {
     font-family: 'ABeeZee';
     text-decoration: none;
     user-select: none;
@@ -25,78 +26,6 @@ body{
     --fixed-color: #fff;
     --hvr-color: #d1d1d1;
 }
-
-/* preloader */
-.loader {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: var(--loader-color);
-}
-
-.percent {
-    color: var(--secondary-color);
-    font-size: 100px;
-    font-weight: 400;
-    text-align: center;
-    margin-bottom: 15px;
-    position: relative;
-    top: 30%;
-}
-
-.text {
-    position: absolute;
-    left: 160px;
-    color: #fdb5ca;
-    font-size: 15px;
-    letter-spacing: 1px;
-    line-height: 21px;
-    display: none;
-}
-
-.text-blink {
-    animation: blink .7s ease-in-out .1s;
-}
-
-@keyframes blink {
-    0% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: .2;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-.progress-bar {
-    width: 405px;
-    height: 20px;
-    background: #111;
-    border-radius: 13px;
-    padding: 3px;
-    box-sizing: border-box;
-    position: relative;
-    top: 30%;
-    left: 34.5%;
-}
-
-.progress {
-    width: 200px;
-    height: 15px;
-    background: var(--nav-color);
-    border-radius: 13px;
-    position: relative;
-}
-
-/* end preloader */
-
 
 #navbar {
     height: 100px;
@@ -165,6 +94,7 @@ body{
     height: 30px;
     outline: none;
 }
+
 /* Navbar ends */
 
 #contex-menu {
@@ -269,22 +199,25 @@ body{
     padding-left: 13px;
     bottom: 35px;
 }
-article{
+
+article {
     background-color: var(--primary-color);
 }
 
-.home{
+.home {
     color: var(--secondary-color);
     text-align: center;
     padding: 10% 0px 14.7% 0px;
 }
+
 .about-me {
     background-color: var(--primary-color);
     height: auto;
     text-align: center;
     padding-top: 25px;
 }
-.about-me h1{
+
+.about-me h1 {
     color: var(--secondary-color);
     text-shadow: 2px 2px 5px var(--secondary-color);
     font-size: 5em;
@@ -292,11 +225,13 @@ article{
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
-.about-me h2{
+
+.about-me h2 {
     color: var(--secondary-color);
     font-size: 40px;
     font-weight: 100;
 }
+
 .about-me p {
     color: var(--secondary-color);
     font-size: 2rem;
@@ -304,6 +239,7 @@ article{
     line-height: 5rem;
     text-shadow: 0.5rem 0.5rem 10px var(--secondary-color);
 }
+
 .about-me img {
     margin-top: 5rem;
     margin-bottom: 5rem;
@@ -312,7 +248,8 @@ article{
     height: 250px;
     border-radius: 50%;
 }
-.about-me .button{
+
+.about-me .button {
     font-size: 15px;
     color: var(--secondary-color);
     background-color: var(--primary-color);
@@ -323,8 +260,9 @@ article{
     box-shadow: 0 0 2em 0.5em var(--secondary-color);
     cursor: pointer;
 }
-.about-me .button:hover{
+
+.about-me .button:hover {
     transition: ease-in-out .5s;
     background-color: var(--nav-color);
-    
-} 
+
+}
