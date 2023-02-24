@@ -48,7 +48,6 @@ body {
     padding-top: 5px;
     width: 50px;
     height: auto;
-    cursor: pointer;
 }
 
 .navigation p {
@@ -204,11 +203,12 @@ article {
     background-color: var(--primary-color);
 }
 
-.home {
+.account {
     color: var(--secondary-color);
     text-align: center;
     padding: 10% 0px 14.7% 0px;
 }
+
 
 .about-me {
     background-color: var(--primary-color);
