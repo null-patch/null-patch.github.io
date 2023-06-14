@@ -209,6 +209,7 @@ article {
     padding: 10% 0px 14.7% 0px;
 }
 
+
 .about-me {
     background-color: var(--primary-color);
     height: auto;
@@ -275,25 +276,4 @@ article {
 .about-me .button:hover {
     transition: ease-in-out .5s;
     background-color: var(--nav-color);
-}
-
-/* Mobile-friendly styles */
-
-@media only screen and (max-width: 600px) {
-    body {
-      font-size: 14px;
-    }
-  
-    .about-me {
-      text-align: center;
-    }
-  
-    .about-me .image {
-      margin-bottom: 20px;
-    }
-  
-    .button {
-      display: block;
-      margin: 20px auto;
-    }
 }
