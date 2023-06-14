@@ -209,7 +209,6 @@ article {
     padding: 10% 0px 14.7% 0px;
 }
 
-
 .about-me {
     background-color: var(--primary-color);
     height: auto;
@@ -225,6 +224,17 @@ article {
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
+.about-me h1 .label:after{
+    content:"Ashrafuzzaman Sajid";
+    transition: ease-in-out 1s;
+}
+.about-me h1 .label:hover:after{
+    content: "a.k.a Ashley Man";
+    transition: ease-in-out 1s;
+    font-size: 1em;
+    letter-spacing: 5px;
+    font-weight: 200;
+}
 
 .about-me h2 {
     color: var(--secondary-color);
@@ -238,6 +248,7 @@ article {
     font-weight: 40;
     line-height: 5rem;
     text-shadow: 0.5rem 0.5rem 10px var(--secondary-color);
+    align-items:baseline;
 }
 
 .about-me img {
@@ -264,5 +275,25 @@ article {
 .about-me .button:hover {
     transition: ease-in-out .5s;
     background-color: var(--nav-color);
+}
 
+/* Mobile-friendly styles */
+
+@media only screen and (max-width: 600px) {
+    body {
+      font-size: 14px;
+    }
+  
+    .about-me {
+      text-align: center;
+    }
+  
+    .about-me .image {
+      margin-bottom: 20px;
+    }
+  
+    .button {
+      display: block;
+      margin: 20px auto;
+    }
 }
