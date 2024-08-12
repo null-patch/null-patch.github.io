@@ -1,4 +1,5 @@
-@import "https://fonts.googleapis.com/css?family=ABeeZee";
+@import url('https://fonts.googleapis.com/css?family=ABeeZee');
+
 
 * {
     margin: 0;
@@ -6,7 +7,7 @@
 }
 
 body {
-    font-family: 'ABeeZee';
+    font-family: 'ABeeZee', sans-serif;
     text-decoration: none;
     user-select: none;
 }
@@ -77,9 +78,8 @@ body {
 
 .navigation ul li a:hover {
     color: var(--nav-color);
-    transition: 0.5s ease-in-out
+    transition: 0.5s ease-in-out;
 }
-
 
 #dark-mode-toggle {
     top: 1em;
@@ -125,7 +125,7 @@ body {
     border: none;
     outline: none;
     background: transparent;
-    color: var(--primary-color)
+    color: var(--primary-color);
 }
 
 #contex-menu .item i {
@@ -225,16 +225,17 @@ article {
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
-.about-me h1 .label:after{
-    content:"Ashrafuzzaman Sajid";
-    transition: ease-in-out 1s;
+
+.about-me h1 .label:after {
+    content: "Ashrafuzzaman Sajid";
 }
-.about-me h1 .label:hover:after{
+
+.about-me h1 .label:hover:after {
     content: "a.k.a Ashley Man";
-    transition: ease-in-out 1s;
     font-size: 1em;
     letter-spacing: 5px;
     font-weight: 200;
+    transition: ease-in-out 1s;
 }
 
 .about-me h2 {
@@ -249,7 +250,7 @@ article {
     font-weight: 40;
     line-height: 5rem;
     text-shadow: 0.5rem 0.5rem 10px var(--secondary-color);
-    align-items:baseline;
+    align-items: baseline;
 }
 
 .about-me img {
@@ -276,4 +277,141 @@ article {
 .about-me .button:hover {
     transition: ease-in-out .5s;
     background-color: var(--nav-color);
+}
+
+/* Skill Graph */
+.skills-container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.skill-bar {
+    background-color: #ddd;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.skill {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: right;
+}
+
+/* Interactive Timeline */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.timeline-item {
+    padding: 10px 20px;
+    position: relative;
+    border-left: 2px solid #4CAF50;
+    margin-left: 20px;
+}
+
+.timeline-item h3 {
+    margin-top: 0;
+    color: var(--secondary-color);
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #4CAF50;
+}
+
+/* Social Media Links */
+.social-links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-links a {
+    margin: 0 10px;
+    color: #4CAF50;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: #333;
+}
+
+/* Animations & Transitions */
+.timeline-item, .skill {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-in-out;
+}
+
+.timeline-item.in-view, .skill.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+#progress-container {
+    width: 50%;
+    background-color: var(--secondary-color);
+    margin: 20px 350px;
+}
+
+#progress-bar {
+    width: 40%; /* Adjust this percentage to represent the completion status */
+    height: 20px;
+    background-color: #4CAF50;
+    text-align: center;
+    line-height: 20px;
+    color: var(--primary-color);
+}
+
+#countdown-timer-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#countdown-timer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.time-box {
+    background: #222;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.label {
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #aaa;
+}
+
+/* Add a slight animation to the numbers */
+.time-box span {
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+    animation: fadeIn 1s ease-in-out infinite;
+}
+
+
+@keyframes fadeIn {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 1; }
 }
